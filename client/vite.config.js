@@ -8,14 +8,11 @@ export default defineConfig({
     port: 3000,
     open: true,
     proxy: {
-      // Uncomment the following code once you have built the queries and mutations in the client folder
       '/graphql': {
-      // Comment out the following code once you have built the queries and mutations in the client folder
-      // '/api': {
-      //   target: 'http://localhost:3001',
-      //   changeOrigin: true,
-      //   secure: false,
+        target: 'http://localhost:3001', 
+        changeOrigin: true,
+        secure: false,
       },
     }
   }
-})
+});
